@@ -14,13 +14,16 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo"><span style="color: #e21e5c;">D</span>aniel.</a>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Projects</a></li>
+                <ul id="side-menu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
                     <li><a href="#">Certificate</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark fas" onclick="closeMenu()"></i>
                 </ul>
+
+                <i class="fa-solid fa-bars fas" onclick="openMenu()"></i>
             </nav>
 
             <div class="header-text">
@@ -118,6 +121,8 @@
         </div>
     </div>
 
+    <!-- ------- certificates ------------ -->
+
 
     <!-- ----------   Contact  -------------     -->
     <div id="contact">
@@ -138,12 +143,13 @@
                 </div>
 
                 <div class="contact-right">
-                    <form action="">
+                    <form action="" name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <button type="submit" id="submit" class="btn btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -155,6 +161,7 @@
 
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="../JS/typewriter.js"></script>
+
     <script>
         var tablinks = document.getElementsByClassName("tab-links");
         var tabcontents = document.getElementsByClassName("tab-contents");
@@ -170,5 +177,37 @@
             document.getElementById(tabname).classList.add("active-tab");
         }
     </script>
+
+    <script>
+        var sidemenu = document.getElementById("side-menu");
+
+        function openMenu(){
+            sidemenu.style.right = "0";
+        }
+
+        function closeMenu(){
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</form>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbykb4cQq-Mi2jq_WXjLZNY3zeqAVY4LmWvtirDE3WMOaieFhcJNGLYticLTzAGDFgU_/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully";
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
