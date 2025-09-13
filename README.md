@@ -7,8 +7,11 @@ Built with **HTML, CSS, and JavaScript**, this site serves as a central hub for 
 
 ## 🚀 Features
 
-- **Responsive Navigation**  
-  Smooth navigation bar with a collapsible mobile menu.
+- **Responsive Design**  
+   Optimized for desktops and smartphones.  
+  - Navigation collapses into a hamburger menu on smaller screens.  
+  - Sections and iframes adjust height automatically for phone view.  
+  - Tested on browser **inspect mode** and real mobile devices for smooth layout.  
 
 - **Typing Animation**  
   Dynamic typing effect on the homepage powered by [Typed.js](https://github.com/mattboldt/typed.js/).
