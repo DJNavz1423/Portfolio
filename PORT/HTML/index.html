@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="../CSS/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+    <style>
+
+        iframe{
+            width: 100%;
+            overflow: hidden;
+            display: block;
+        }
+    </style>
+
+    
+
+
     <title>Portfolio Website</title>
 </head>
 
@@ -13,13 +25,13 @@
     <div id="header">
         <div class="container">
             <nav>
-                <a href="#" class="logo"><span style="color: #e21e5c;">D</span>aniel.</a>
+                <a href="#header" class="logo"><span style="color: #e21e5c;">D</span>aniel.</a>
                 <ul id="side-menu">
                     <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="#">Certificate</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about-section">About</a></li>
+                    <li><a href="#project-section">Projects</a></li>
+                    <li><a href="#certificate-section">Certificate</a></li>
+                    <li><a href="#contact-section">Contact</a></li>
                     <i class="fa-solid fa-circle-xmark fas" onclick="closeMenu()"></i>
                 </ul>
 
@@ -32,182 +44,43 @@
             </div>
         </div>
     </div>
+
+    <!-- back to top butn -->
+
+    <a href="#header" id="back-to-top"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="m12 6.414 7.293 7.293 1.414-1.414L12 3.586l-8.707 8.707 1.414 1.414L12 6.414z"/><path d="m3.293 18.293 1.414 1.414L12 12.414l7.293 7.293 1.414-1.414L12 9.586l-8.707 8.707z"/></svg></a>
     
 
     <!----------------- About Section ---------------------->
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="../IMG/developerActivity.svg" alt="man on lappy">
-                </div>
-
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p>Hello! I'm Daniel, a passionate game developer, web developer, and cybersecurity enthusiast from the Philippines. I love creating immersive gaming experiences, building dynamic websites, and exploring the world of cybersecurity and ethical hacking.</p>
-
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>C++</span>Game Development</li>
-                            <li><span>Python</span>Automation & Security Scripting</li>
-                            <li><span>HTML/CSS/JS</span>Web Development</li>
-                            <li><span>Linux</span>Ethical Hacking & Penetration Testing</li>
-                            <li><span>Networking</span>Infrastructure & Security</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>Current</span>BSIT at St. John Paul II College of Davao</li>
-                            <li><span>Current</span>Cybersecurity Training at ISC2 Org.</li>
-                            <li><span>Current</span>IBM SkillsBuild at TESDA.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="about-section">
+        <iframe src="sections/about.html" scrolling="no" frameborder="0" class="myIframe"></iframe>
     </div>
+
 
     <!----------------- Portfolio Section ---------------------->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            
-            <div class="work-list">
-                <div class="work">
-                    <img src="../IMG/3836618.jpg" alt="Keylogger">
-
-                    <div class="layer">
-                        <h3>Keylogger</h3>
-                        <p> Developed a Python-based keyboard monitoring tool with MongoDB integration, demonstrating expertise in database management, background processes, and ethical security programming.</p>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-               <!--<div class="work">
-                    <img src="" alt="SciCal Android">
-                </div>--> 
-
-                <div class="work">
-                    <img src="../IMG/ecom.jpg" alt="Ecommerce Website">
-
-                    <div class="layer">
-                        <h3>Fullstack Ecommerce Website</h3>
-                        <p>A responsive e-commerce web application built with React, Redux Toolkit, and Material-UI, powered by Strapi CMS for seamless product management.</p>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-
-                <!--<div class="work">
-                    <img src="" alt="SIEM Dashboard">
-                </div>-->
-
-                <div class="work">
-                    <img src="../IMG/screenshot.png" alt="Chess Game">
-
-                    <div class="layer">
-                        <h3>Chess Game</h3>
-                        <p>A simple C++ chess game built with SFML, featuring drag-and-drop piece movement and Stockfish engine integration.</p>
-                        <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
-                    </div>
-                </div>
-            </div>
-            <a href="" class="btn">See more</a>
-        </div>
+    <div id="project-section">
+        <iframe src="sections/portfolio.html" scrolling="no" frameborder="0" class="myIframe"></iframe>
     </div>
 
+
     <!-- ------- certificates ------------ -->
+    <div id="certificate-section">
+        <iframe src="sections/certificates.html" scrolling="no" frameborder="0" class="myIframe"></iframe>
+    </div>
 
 
     <!-- ----------   Contact  -------------     -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i> danielnavarro2444@gmail.com</p>
-                    <p><i class="fa-solid fa-square-phone"></i> 09563804358</p>
-
-                    <div class="social-icons">
-                        <a href=""><i class="fa-brands fa-facebook"></i></a>
-                        <a href=""><i class="fa-brands fa-github"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                    </div>
-
-                    <a href="" download class="btn btn2">Download CV</a>
-                </div>
-
-                <div class="contact-right">
-                    <form action="" name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" id="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <p><i class="fa-regular fa-copyright"></i> 2025 Daniel. All Rights Reserved</p>
-        </div>
+    <div id="contact-section">
+        <iframe src="sections/contact.html" scrolling="no" frameborder="0" class="myIframe"></iframe>
     </div>
-    
 
+
+
+    <script src="../JS/index.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="../JS/typewriter.js"></script>
-
-    <script>
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-
-        function opentab(tabname) {
-            for (tablink of tablinks) {
-                tablink.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-    <script>
-        var sidemenu = document.getElementById("side-menu");
-
-        function openMenu(){
-            sidemenu.style.right = "0";
-        }
-
-        function closeMenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
-</form>
-
-<script>
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbykb4cQq-Mi2jq_WXjLZNY3zeqAVY4LmWvtirDE3WMOaieFhcJNGLYticLTzAGDFgU_/exec'
-  const form = document.forms['submit-to-google-sheet']
-  const msg = document.getElementById("msg")
-
-  form.addEventListener('submit', e => {
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        msg.innerHTML = "Message sent successfully";
-        setTimeout(function(){
-            msg.innerHTML = ""
-        }, 5000)
-        form.reset()
-      })
-      .catch(error => console.error('Error!', error.message))
-  })
-</script>
+    
+    <script src="../JS/sideMenu.js"></script>
+    
+    <script src="../JS/scrollToTop.js"></script>
 </body>
 </html>

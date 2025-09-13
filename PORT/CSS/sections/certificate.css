@@ -1,0 +1,58 @@
+/*********** certs n badges ***********/
+#certificates{
+  padding: 30px 0 60px;
+}
+
+.certificate-list{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.certificate-list div{
+  background: #262626;
+  padding: 40px;
+  font-size: 1em;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+.certificate-list div:hover{
+  background: #ff004f;
+  transform: translateY(-10px);
+}
+
+.certificate-list div img{
+  width: 40%;
+  display: block;
+  margin-bottom: 30px;
+}
+.certificate-list div h2{
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.certificate-list div p{
+  line-height: 150%;
+}
+.cert-info{
+  margin-bottom: 5px;
+}
+.cert-info span{
+  font-weight: 550;
+}
+
+.certificate-list div a{
+  text-underline-offset: 1.5px;
+  color: #fff;
+  margin-top: 20px;
+  display: inline-block;
+  transition: 0.5s ease;
+}
+.certificate-list div a:hover{
+  transform: scale(1.1);
+  text-decoration: underline;
+  color: #262626;
+  text-underline-offset: 4px;
+}
