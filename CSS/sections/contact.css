@@ -79,10 +79,45 @@ form .btn.btn2{
   width: 100%;
   text-align: center;
   padding: 25px 0;
-  background: #262626;
+  background: #0f0f0f;
   font-weight: 300;
   margin-top: 20px;
 }
 .copyright i{
   color: #ff004f;
+}
+
+@media only screen and (max-width: 600px){
+  /***** contact *****/
+  .sub-title{
+    font-size: 30px;
+  }
+  .row{
+    gap: 40px;
+  }
+  .contact-left, .contact-right{
+    flex-basis: 100%;
+  }
+
+  .copyright{
+    font-size: 14px;
+  }
+
+  form input, form textarea{
+    font-size: 16px;
+    margin: 10px 0;
+  }
+
+  form .btn.btn2{
+    font-size: 16px;
+    margin-top: 10px;
+  }
+
+  #back-to-top{
+    width: 25px;
+    height: 25px;
+  }
+  #back-to-top svg{
+    scale: 0.8;
+  }
 }

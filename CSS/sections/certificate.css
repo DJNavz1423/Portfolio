@@ -11,8 +11,8 @@
 }
 
 .certificate-list div{
-  background: #262626;
-  padding: 40px;
+  background: #0f0f0f;
+  padding: 30px;
   font-size: 1em;
   font-weight: 300;
   border-radius: 10px;
@@ -29,18 +29,21 @@
   margin-bottom: 30px;
 }
 .certificate-list div h2{
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
 }
 .certificate-list div p{
+  font-size: 16px;
   line-height: 150%;
+  color: #ababab;
 }
 .cert-info{
   margin-bottom: 5px;
 }
 .cert-info span{
-  font-weight: 550;
+  color: #fff;
+  font-weight: 500;
 }
 
 .certificate-list div a{
@@ -55,4 +58,48 @@
   text-decoration: underline;
   color: #262626;
   text-underline-offset: 4px;
+}
+
+@media only screen and (max-width: 600px){
+  /******* cert *******/
+  .sub-title{
+    font-size: 30px;
+  }
+
+  .certificate-list{
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+  .certificate-list div{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  /** img **/
+  .certificate-list div img{
+  width: 55%;
+  display: block;
+  margin-bottom: 15px;
+}
+
+
+.certificate-list div h2{
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.certificate-list div p{
+  display: none;
+}
+.certificate-list div a{
+  font-size: 12px;
+  margin-top: 5px;
+}
 }
